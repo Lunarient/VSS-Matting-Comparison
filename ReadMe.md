@@ -12,21 +12,17 @@ with optional **Harmonizer** post-processing for improved compositing.
 ESOFProject/
 ├── Data/
 │ ├── Results/
-| | └──MatAnyone/
+| | └──Model_A/
 │ └── YouTubeMatte/
 │ │ ├── youtubematte_512x288/
 │ │ └── youtubematte_1920x1080/
 │ └── YouTubeMatte_first_frame_seg_mask/
 │
 ├── Models/
-│ ├── Harmonizer/
 │ ├── Model_A/MatAnyone/
 │ ├── Model_B/RVM/
 │ └── Model_C/MODNet/
 │
-├── Comparison/
-│ ├── compare_results.py
-│ └── metrics.py
 │
 └── Scripts/
   ├── setup_all_envs.sh
@@ -64,28 +60,6 @@ Each model’s output will be written to:
 ```
 Data/Results/<Model_Name>/
 ```
-
-## 📊 Comparing Results
-
-Quantitatively compare outputs to ground truth masks:
-
-```python
-Comparison/compare_results.py \
-  --results Data/Results/ \
-  --gt Data/YouTubeMatte_first_frame_seg_mask/
-```
-
-Metrics computed:
-  - SAD – Sum of Absolute Differences
-
-  - MSE – Mean Squared Error
-
-  - PSNR – Peak Signal-to-Noise Ratio
-
-## 🌈 Harmonizer
-
-The Harmonizer model runs as a final post-processing step.
-It adjusts color, brightness, and tone for natural compositing.
 
 ## 🧠 Notes
   - Each model has its own virtual environment to avoid dependency conflicts.
