@@ -1,3 +1,6 @@
 venv
 /Data/YouTubeMatte
 /Data/YouTubeMatte_first_frame_seg_mask
+/Data/Results/Model_C
+/Data/Results/Model_B
+/Data/Results/Model_A
